@@ -59,7 +59,7 @@ export function Form() {
         title="Entrar com o Google"
         onPress={handleGoogleSignIn}
       />
-      {/* */}
+      {/*Fazer o componente User*/}
       <View>
         <Text>{userData.email}</Text>
         <Text>{userData.name}</Text>
