@@ -7,19 +7,14 @@ import { Button } from '../Button';
 import * as AuthSession from 'expo-auth-session';
 import { View, Text } from 'react-native';
 
+import { User, UserProps } from '../User';
+
 //tipagem
 type AuthResponse = {
   params: {
     access_token: string;
   };
   type: string;
-}
-
-//tipagem para os dados do usuario
-type UserProps = {
-  name: string;
-  email: string;
-  picture: string;
 }
 
 export function Form() {
@@ -60,10 +55,7 @@ export function Form() {
         onPress={handleGoogleSignIn}
       />
       {/*Fazer o componente User*/}
-      <View>
-        <Text>{userData.email}</Text>
-        <Text>{userData.name}</Text>
-      </View>
+      <User user={userData} />
 
     </Container>
   )
